@@ -1,0 +1,8 @@
+SAB 0.8
+SBC 0.75
+ABA 0.5
+Aa 0.5
+BCC 0.1
+Bb 0.9
+CAB 0.2
+Ca 0.8

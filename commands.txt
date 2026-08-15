@@ -1,0 +1,52 @@
+Reference transcript: the exact commands and expected outputs from the assignment.
+The integration tests in test_cyk.py reproduce each of these.
+
+$ cat g1.txt
+SAB
+SBC
+ABA
+Aa
+BCC
+Bb
+CAB
+Ca
+
+$ python3 cyk.py -g g1.txt
+yes
+
+$ cat g2.txt
+SaSb
+Sab
+
+$ python3 cyk.py -g g2.txt
+no
+
+$ cat in.txt
+bbab
+bba
+
+$ cat in.txt | python3 cyk.py -p g1.txt
+yes
+no
+
+$ cat in.txt | python3 cyk.py -t g1.txt
+(S (A (B b) (A (B b) (A a))) (B b))
+(S (B b) (C (A (B b) (A a)) (B b)))
+
+no
+
+$ cat g1s.txt
+SAB 0.25
+SBC 0.75
+ABA 0.5
+Aa 0.5
+BCC 0.1
+Bb 0.9
+CAB 0.2
+Ca 0.8
+
+$ cat in.txt | python3 cyk.py -s g1s.txt
+(S (A (B b) (A (B b) (A a))) (B b)) 0.02278
+(S (B b) (C (A (B b) (A a)) (B b))) 0.02733
+
+no
