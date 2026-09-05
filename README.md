@@ -1,5 +1,10 @@
 # cyk-parser
 
+> **Note:** this repository is a *fork* of work developed as a pair with
+> Yare Brea Espinosa for a course on Automata Theory and Formal Languages.
+> Development was done locally and jointly; the original repo is
+> [github.com/YareBE/cyk-parser](https://github.com/YareBE/cyk-parser).
+
 A CYK parser for context-free grammars in Chomsky Normal Form that decides membership,
 enumerates *every* derivation tree of an ambiguous string, and propagates rule
 probabilities through those trees for stochastic parsing.
